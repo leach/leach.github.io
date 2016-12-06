@@ -220,4 +220,4 @@ Any word wrapped with two tildes (like ~~this~~) will appear crossed out.
 
 GitHub supports emoji! :sparkles: :camel: :boom:
 
-To see a list of every image we support, check out the Emoji Cheat Sheet.
+To see a list of every image we support, check out the [Emoji Cheat Sheet](http://www.webpagefx.com/tools/emoji-cheat-sheet/).
