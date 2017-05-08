@@ -275,7 +275,7 @@ a.grey-link, a.grey-link:hover, a.grey-link:visited {
 		<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 		<script>
 			var cloudTieConfig = {
-				url: "{{ site.domain }}{{ page.url }}", //document.location.href, 
+				url: document.location.href, 
 				sourceId: "{{ page.pid }}",
 				productKey: "d0e8fcb3cc9748eb9edfa2c5af0ad386",
 				target: "cloud-tie-wrapper"
