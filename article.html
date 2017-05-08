@@ -295,7 +295,24 @@ a.white, a.white:hover, a.white:visited {
 			<img style="margin-top: 10px; margin-right: 10px;" src="{{ site.images_url }}rss.svg" width="20px" alt="" border="0"/>
 		</a>
 		<!-- duoshuo -->
+		<!--
 		<div class="ds-thread" data-thread-key="index" data-max-depth="{{ site.duoshuo_max_depth }}" data-title="{{ site.title }}" data-url="{{ site.domain }}{{ page.url }}"></div>
+		-->
+		<!-- DOM元素 -->
+		<!-- 根据站点情况，配置data-url或data-sourceId中的一个即可 -->
+		<span 
+		lang="join-count" 
+		class="join-count" 
+		data-url="" 
+		data-sourceId="">0</span>
+
+		<!-- JavaScript 配置 -->
+		<script>var yunModuleEnv = true;</script>
+		<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+		<script>
+		var yunTieProductKey = "d0e8fcb3cc9748eb9edfa2c5af0ad386";
+		Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vZXh0ZW5kL2xpc3Rfam9pbl9zY3JpcHQuaHRtbA==", true);
+		</script>
 	</div>
 </div>
 <div class="talk">Don't be afraid, Step By Step</div>
