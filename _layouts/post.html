@@ -265,14 +265,31 @@ a.grey-link, a.grey-link:hover, a.grey-link:visited {
 			</div>
  		</div>
 		<!-- duoshuo 评论组件-->
+		<!--
 		<div name="comments" id="comments">
-		<div class="ds-thread" data-thread-key="{{ page.pid }}" data-max-depth="{{ site.duoshuo_max_depth }}" data-title="{{ page.title }}" data-url="{{ site.domain }}{{ page.url }}"></div>
+		<div class="ds-thread" data-thread-key="{{ page.pid }}" data-max-depth="{{ site.duoshuo_max_depth }}" data-title="{{ page.title }}" data-url="{{ site.domain }}{{ page.url }}">
 		</div>
+		</div>
+		-->
+		<!-- 网易云跟帖 start -->
+		<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+		<script>
+			var cloudTieConfig = {
+				url: "{{ site.domain }}{{ page.url }}", //document.location.href, 
+				sourceId: "{{ page.pid }}",
+				productKey: "d0e8fcb3cc9748eb9edfa2c5af0ad386",
+				target: "cloud-tie-wrapper"
+			};
+		</script>
+		<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+		<!-- 网易云跟帖 end -->
 	</div>
 </div>
 
-<!-- duoshuo -->
+<!-- duoshuo 
 {% include duoshuo.js %}
+<script src="{{ site.w3c_url }}js/jquery.duoshuo.js"></script>
+-->
 
 <!-- jQuery -->
 <script type="text/javascript">
@@ -281,7 +298,6 @@ a.grey-link, a.grey-link:hover, a.grey-link:visited {
 <script src="{{ site.jquery_url }}"></script>
 <script src="{{ site.w3c_url }}js/timeago.js"></script>
 <script src="{{ site.w3c_url }}js/pagecache.js"></script>
-<script src="{{ site.w3c_url }}js/jquery.duoshuo.js"></script>
 
 <script src="{{ site.w3c_url }}js/post.js"></script>
 <script>
