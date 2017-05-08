@@ -298,6 +298,18 @@ a.white, a.white:hover, a.white:visited {
 		<!--
 		<div class="ds-thread" data-thread-key="index" data-max-depth="{{ site.duoshuo_max_depth }}" data-title="{{ site.title }}" data-url="{{ site.domain }}{{ page.url }}"></div>
 		-->
+		<!-- 网易云跟帖 start -->
+		<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+		<script>
+			var cloudTieConfig = {
+				url: document.location.href, 
+				sourceId: "",
+				productKey: "d0e8fcb3cc9748eb9edfa2c5af0ad386",
+				target: "cloud-tie-wrapper"
+			};
+		</script>
+		<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+		<!-- 网易云跟帖 end -->
 		<!-- DOM元素 -->
 		<!-- 根据站点情况，配置data-url或data-sourceId中的一个即可 -->
 		<span 
