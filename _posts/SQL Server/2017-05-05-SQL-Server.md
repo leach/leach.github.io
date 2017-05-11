@@ -7,9 +7,13 @@ pid: 20170505-185236
 image: sqlserver.jpg
 ---
 
+{:use_numbered_headers => true}
+* auto-gen TOC:
+{:toc}
+
 ***
 
->拆分字符串string_split 
+### 1.拆分字符串string_split 
 
 ``` sql
 select value from string_split(@contactBId,',')
@@ -17,7 +21,7 @@ select value from string_split(@contactBId,',')
 
 ***
 
->sql server解析json 
+### 2.sql server解析json 
 
 ``` sql
 Select * from openJson('
@@ -47,7 +51,7 @@ WITH(
 
 ***
 
->字符串转日期
+### 3.字符串转日期
 ``` sql
 字符串转日期
 
@@ -63,7 +67,7 @@ SELECT CONVERT(datetime,'11/1/2003',103)
 --结果:2003-01-11 00:00:00.000
 ```
 
->日期格式化为字符串 convert
+### 4.日期格式化为字符串 convert
 
 ``` sql
 -- CONVERT() 函数是把日期转换为新数据类型的通用函数。
@@ -124,7 +128,7 @@ Select CONVERT(varchar(100), GETDATE(), 131)   --  18/04/1427 10:57:49:920AM
 
 ***
 
->查找字符串 CHARINDEX
+### 5.查找字符串 CHARINDEX
 
 ``` sql
 -- 类似indexOf
@@ -137,7 +141,7 @@ SELECT LEN('ab.cd.efg')   -- 9
 
 ***
 
->取两个时间差 DATEDIFF 
+### 6.取两个时间差 DATEDIFF 
 
 ``` sql
 DATEDIFF
@@ -168,7 +172,7 @@ SELECT DATEDIFF(dd, convert(datetime, '2017-09-08', 20), convert(datetime, '2017
 
 ***
 
->OVER(PARTITION BY)函数用法
+### 7.OVER(PARTITION BY)函数用法
 
 ``` sql
 -- 分组聚合，取日期内第一条记录
@@ -183,7 +187,7 @@ row_number() OVER(PARTITION by b.effectStartTime order by b.effectStartTime) num
 
 ***
 
->stuff  : 实现mysql group_concat效果
+### 8.stuff  : 实现mysql group_concat效果
 
 ``` sql
 SELECT
@@ -237,7 +241,7 @@ SELECT STUFF(
 
 ***
 
->分页查询 offset 
+### 9.分页查询 offset 
 
 ```sql
 SELECT * from bill order by id
@@ -249,7 +253,7 @@ offset @start  rows fetch next @limit  rows only
 
 ***
 
->强转  cast
+### 10.强转  cast
 
 ``` sql
 CAST (expression AS data_type)
@@ -259,7 +263,7 @@ SELECT CAST('12' AS int)
 
 ***
 
->执行存储过程
+### 11.执行存储过程
 ``` sql
 DECLARE	@return_value int,
 		@totalRow nvarchar(36),
@@ -303,7 +307,7 @@ GO
 
 ***
 
->连接字符串 concat
+### 12.连接字符串 concat
 
 ``` sql 
 concat(str1, str1)
@@ -315,7 +319,7 @@ SELECT '123' + 123  -- 246
 
 ***
 
->日期处理函数 DATEADD
+### 13.日期处理函数 DATEADD
 
 ```
 SQL Server Date 函数
@@ -328,7 +332,7 @@ CONVERT() 用不同的格式显示日期/时间
 ``` sql
 select DATEADD(mm, -1, GETDATE())
 ```
->定义和用法
+### 14.定义和用法
 DATEADD() 函数在日期中添加或减去指定的时间间隔。
 语法
 DATEADD(datepart,number,date)
@@ -355,7 +359,7 @@ datepart 参数可以是下列的值：
 
 ***
 
->取行号 row_number() over(order by id desc)
+### 15.取行号 row_number() over(order by id desc)
 
 ``` sql
 SELECT  row_number() over(order by id desc) as num,t.* from bill t
@@ -363,8 +367,8 @@ SELECT  row_number() over(order by id desc) as num,t.* from bill t
 
 ***
 
+### 16.SET XACT_ABORT
 >指定当 Transact-SQL 语句产生运行时错误时，Microsoft® SQL Server™ 是否自动回滚当前事务  
->SET XACT_ABORT
 
 ```
 Transact-SQL 参考
