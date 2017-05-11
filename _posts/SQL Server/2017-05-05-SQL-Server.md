@@ -7,13 +7,13 @@ pid: 20170505-185236
 image: sqlserver.jpg
 ---
 
->拆分字符串string_split
+>拆分字符串string_split 
 
 ``` sql
 select value from string_split(@contactBId,',')
 ```
 
->sql server解析json
+>sql server解析json 
 
 ``` sql
 Select * from openJson('
