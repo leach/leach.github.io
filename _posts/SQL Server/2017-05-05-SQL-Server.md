@@ -8,9 +8,11 @@ image: sqlserver.jpg
 ---
 
 >拆分字符串string_split
+
 ``` sql
 select value from string_split(@contactBId,',')
 ```
+
 >sql server解析json
 
 ``` sql
